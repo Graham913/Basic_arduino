@@ -38,6 +38,6 @@ void loop() {
 ```
 
 ### Wiring
-[Graham.circuit](images/graham.LEDblink.PNG)
+![Graham.circuit](images/graham.LEDblink.PNG)
 
 ### Reflection
