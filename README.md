@@ -42,3 +42,61 @@ void loop() {
 
 ### Reflection
  At the beginning it was easy until I reached the spicy part to make the LED fade in and out. I read through a couple forums to find the righttype of thing to use then it was just trial and error.
+
+
+
+
+
+
+## finite LED blinker
+
+make one LED blink 5 times then switch to another LED to blink 5 times then stop
+
+### code
+
+```c++
+/*
+
+*/
+int ledPin = 9;
+int maxnum = 5;
+int counter = 0;
+void setup() {
+
+  pinMode(13, OUTPUT);
+  pinMode(9, OUTPUT);
+}
+
+void loop()
+{
+  if (counter < maxnum) {
+    digitalWrite(13, HIGH);
+
+    delay(250);
+
+    digitalWrite(13, LOW);
+
+    delay(250);
+
+    counter++;
+  } else if (counter < (maxnum * 2)) {
+    digitalWrite(9, HIGH);
+
+    delay(250);
+
+    digitalWrite(9, LOW);
+
+    delay(250);
+
+    counter++;
+  } else {
+  counter=0;
+  }
+}
+
+
+```
+
+### wiring
+
+![Graham.circuit](images/Graham.LED5blink.PNG)
