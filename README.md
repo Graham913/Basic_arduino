@@ -99,4 +99,4 @@ void loop()
 
 ### wiring
 
-![Graham.circuit](images/Graham.5blink.PNG)
+![Graham.circuit](images/Graham.5blink.png)
