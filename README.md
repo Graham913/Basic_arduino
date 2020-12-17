@@ -41,3 +41,4 @@ void loop() {
 ![Graham.circuit](images/graham.LEDblink.PNG)
 
 ### Reflection
+ At the beginning it was easy until I reached the spicy part to make the LED fade in and out. I read through a couple forums to find the righttype of thing to use then it was just trial and error.
