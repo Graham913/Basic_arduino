@@ -100,3 +100,8 @@ void loop()
 ### wiring
 
 ![Graham.circuit](images/Graham.5blink.png)
+
+
+### reflection
+
+This one was much more difficult then the last one because of I didnt really understand how code works at first then I got it explained to me so after a bit of problem solving I finally got it.
