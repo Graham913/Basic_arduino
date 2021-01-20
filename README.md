@@ -171,3 +171,8 @@ void fastServo() {
 ```
 ### wiring
 ![Graham.Hellofunctions](images/Hello.functions.PNG)
+
+
+### reflection
+
+I made the distance calculator pretty quickly, the main problem was getting the servo to turn with functions based on the distance. I spoent a long time figuring out where to put the wires as well as how to make the servo work with the sensor. I had to ask for help many times but I got it finally after a lot of frustration.
