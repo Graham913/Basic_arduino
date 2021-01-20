@@ -170,4 +170,4 @@ void fastServo() {
 }
 ```
 ### wiring
-
+![Graham.Hellofunctions](images/Hello.functions.PNG)
