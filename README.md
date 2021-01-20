@@ -105,3 +105,69 @@ void loop()
 ### reflection
 
 This one was much more difficult then the last one because of I didnt really understand how code works at first then I got it explained to me so after a bit of problem solving I finally got it.
+
+
+
+
+
+## hello functions
+
+make a dstance calculator then ahve a servo turn a certain amount depending on the distance
+
+
+### code
+
+
+```c++
+#define echoPin 7
+#define trigPin 8
+#include <Servo.h>
+long duration;
+long distance;
+Servo myServo;
+void setup() {
+  Serial.begin(9600);
+  pinMode(echoPin, INPUT);
+  pinMode(trigPin, OUTPUT);
+  myServo.attach(10);
+}
+
+void loop() {
+
+
+  Serial.println(getDistance());
+
+  delay(500);
+
+  if (getDistance() > 10 ) {
+    myServo.write(75);
+    delay(500);
+
+  }
+  else {
+    fastServo();
+    delay(500);
+  }
+
+}
+
+int getDistance() {
+  digitalWrite(trigPin, LOW)  ;
+  delayMicroseconds(2);
+
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH);
+
+  distance = duration / 58.2;
+  return distance;
+}
+void fastServo() {
+  myServo.write(180);
+}
+```
+### wiring
+
