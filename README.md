@@ -176,3 +176,76 @@ void fastServo() {
 ### reflection
 
 I made the distance calculator pretty quickly, the main problem was getting the servo to turn with functions based on the distance. I spoent a long time figuring out where to put the wires as well as how to make the servo work with the sensor. I had to ask for help many times but I got it finally after a lot of frustration.
+
+
+## newPing
+
+do something using the newPing library
+
+
+## code
+
+
+```C++
+#include <NewPing.h>
+
+#define TRIGGER_PIN 12
+#define ECHO_PIN 11
+#define MAX_DISTANCE 200
+int ledPin = 9;
+NewPing myHC_SR04(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(9, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
+  pinMode(TRIGGER_PIN, OUTPUT);
+}
+
+void loop() {
+
+  Serial.println(myHC_SR04.ping_cm());
+
+  delay(100);
+
+  if (myHC_SR04.ping_cm() > 15 ) {
+
+    digitalWrite(9, HIGH);
+
+    delay(250);
+
+    digitalWrite(9, LOW);
+
+    delay(50);
+
+  }
+  else {
+    digitalWrite(9, LOW);
+
+  }
+  
+  if (myHC_SR04.ping_cm() < 15 ) {
+    digitalWrite(8, HIGH);
+
+    delay(250);
+
+    digitalWrite(8, LOW);
+
+    delay(50);
+
+  }
+  else{
+    digitalWrite(9, LOW);
+  }
+}
+```
+### wiring
+
+![Graham.newPing](images/Graham.newPing.PNG)
+
+
+### reflection
+
+This was very easy, all I had to do was put in old led code that I use for the led blink project and then it was good to go
