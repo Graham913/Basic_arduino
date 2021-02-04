@@ -257,3 +257,43 @@ This was very easy, all I had to do was put in old led code that I use for the l
 Make a nightlight that turns on when it gets dark
 
 ## code
+
+```c++
+
+int pResistor = A3; 
+int ledPin=9;  
+
+
+int val = 0;			
+
+void setup(){
+ pinMode(9, OUTPUT);  
+ pinMode(pResistor, INPUT);
+ Serial.begin(9600);
+}
+
+void loop(){
+
+  val = analogRead(pResistor);
+  Serial.println(val);
+  delay(50);
+  if (val < 15){
+    digitalWrite(9, HIGH); 
+  }
+  else{
+    digitalWrite(9, LOW); 
+  }
+
+  delay(200); 
+
+}
+
+```
+
+### wiring
+
+![Graham.photo](images/Graham.photo.PNG)
+
+### reflection
+
+This one was actually pretty easy. I used code from my 5 blink project to make the LED turn on and off with certain variables and add the photo resistor code.
