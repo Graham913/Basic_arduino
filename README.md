@@ -249,3 +249,11 @@ void loop() {
 ### reflection
 
 This was very easy, all I had to do was put in old led code that I use for the led blink project and then it was good to go
+
+
+
+## Photoresistor 
+
+Make a nightlight that turns on when it gets dark
+
+## code
